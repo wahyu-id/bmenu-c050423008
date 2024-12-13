@@ -30,7 +30,7 @@ getch();
 
 
 int main() {
-int data [100];
+int n, data [100];
 char pl;
 do
 {
