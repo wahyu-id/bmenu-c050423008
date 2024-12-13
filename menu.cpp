@@ -24,13 +24,13 @@ cout<<"Masukan angka :";
 
 void mPertama(string pesan){
 system("cls");
-cout<<"hallo saya menu "<<pesan;
+// cout<<"Masukkan jumalh data "<<pesan;
 getch();
 }
 
 
 int main() {
-int n, data [100];
+int data [100];
 char pl;
 do
 {
@@ -40,7 +40,13 @@ do
   {
    case '1':
     /* code */
-    mPertama("pertama");
+    system("cls");
+    cout << "Masukkan jumlah data:";
+      cin >> n;
+        for (int i = 0 ; i < n; i++){
+          cout << "Masukkan data ke-" << i + 1 << ":"; 
+            cin >> data[i];
+        }
     break;
    case '2':
     mPertama("ke- dua");
