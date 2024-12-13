@@ -11,6 +11,14 @@ void tukar(int *a, int *b){
   *b=t;
 }
 
+void tampilkan (int data[]){
+  system("cls");
+    cout << "Data yang dimasukkan:\n";
+        for (int i = 0 ; i < n; i++){
+          cout << "Data ke-" << i + 1 << ":" << data[i] << endl;}
+    getch();
+}
+
 void bubble_sort (int data[]){
   for (int i = 1; i < n; i++){
     for (int j = n-1; j >= i; j--){
@@ -71,11 +79,7 @@ do
         }
     break;
   case '2':
-    system("cls");
-    cout << "Data yang dimasukkan:\n";
-        for (int i = 0 ; i < n; i++){
-          cout << "Data ke-" << i + 1 << ":" << data[i] << endl;}
-    getch();
+  tampilkan(data);
     break;  
   case '3':
     bubble_sort(data);
