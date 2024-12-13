@@ -4,10 +4,25 @@ using namespace std;
 
 int n;
 
+
 void tukar(int *a, int *b){
   int t=*a;
   *a=*b;
   *b=t;
+}
+
+void bubble_sort (int data[]){
+  for (int i = 1; i < n; i++){
+    for (int j = n-1; j >= i; j--){
+      if (data[j]<data[j-1])
+      tukar (&data[j],&data[j-1]);
+    }
+  }
+  system("cls");
+    cout << "Data setelah ASC\n";
+        for (int i = 0 ; i < n; i++){
+          cout << "Data ke-" << data[i] << endl;}
+    getch();
 }
 
 void dMenu(){
@@ -22,13 +37,6 @@ cout<<"Masukan angka :";
 
 }
 
-void mPertama(string pesan){
-system("cls");
-// cout<<"Masukkan jumalh data "<<pesan;
-getch();
-}
-
-
 int main() {
 int data [100];
 char pl;
@@ -41,7 +49,7 @@ do
   case '1':
     /* code */
     system("cls");
-    cout << "Masukkan jumlah data:\n";
+    cout << "Masukkan jumlah data:";
       cin >> n;
         for (int i = 0 ; i < n; i++){
           cout << "Masukkan data ke-" << i + 1 << ":"; 
@@ -54,15 +62,11 @@ do
         for (int i = 0 ; i < n; i++){
           cout << "Data ke-" << i + 1 << ":" << data[i] << endl;}
     getch();
-    /* code */ 
     break;  
   case '3':
-    mPertama("ke- tiga");
-    /* code */
+    bubble_sort(data);
     break;  
   case '4':
-    mPertama("ke- empat");
-    /* code */
     break;  
   case '5':
     /* code */
