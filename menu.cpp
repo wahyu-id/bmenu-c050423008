@@ -11,6 +11,16 @@ void tukar(int *a, int *b){
   *b=t;
 }
 
+void masukkan(int data[]){
+  system("cls");
+    cout << "Masukkan jumlah data:";
+      cin >> n;
+        for (int i = 0 ; i < n; i++){
+          cout << "Masukkan data ke-" << i + 1 << ":"; 
+            cin >> data[i];
+        }
+}
+
 void tampilkan (int data[]){
   system("cls");
     cout << "Data yang dimasukkan:\n";
@@ -69,14 +79,7 @@ do
   switch (pl)
   {
   case '1':
-    /* code */
-    system("cls");
-    cout << "Masukkan jumlah data:";
-      cin >> n;
-        for (int i = 0 ; i < n; i++){
-          cout << "Masukkan data ke-" << i + 1 << ":"; 
-            cin >> data[i];
-        }
+    masukkan(data);
     break;
   case '2':
   tampilkan(data);
@@ -88,7 +91,6 @@ do
     bubble_sort2(data);
     break;  
   case '5':
-    /* code */
     break;
   
   default:
