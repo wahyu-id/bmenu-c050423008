@@ -38,25 +38,29 @@ do
     pl=getch();
   switch (pl)
   {
-   case '1':
+  case '1':
     /* code */
     system("cls");
-    cout << "Masukkan jumlah data:";
+    cout << "Masukkan jumlah data:\n";
       cin >> n;
         for (int i = 0 ; i < n; i++){
           cout << "Masukkan data ke-" << i + 1 << ":"; 
             cin >> data[i];
         }
     break;
-   case '2':
-    mPertama("ke- dua");
+  case '2':
+    system("cls");
+    cout << "Data yang dimasukkan:\n";
+        for (int i = 0 ; i < n; i++){
+          cout << "Data ke-" << i + 1 << ":" << data[i] << endl;}
+    getch();
     /* code */ 
     break;  
-   case '3':
+  case '3':
     mPertama("ke- tiga");
     /* code */
     break;  
-   case '4':
+  case '4':
     mPertama("ke- empat");
     /* code */
     break;  
